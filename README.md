@@ -1,17 +1,18 @@
 Software Dependencies:
-•) NumPy
-•) Matplotlib.pyplot
-•) Sys
+- NumPy
+- Matplotlib.pyplot
+- Sys
 
 This code can be found on Github and can be downloaded or forked.
 
 There are two options to run the code:
 1) Use a command line
-•) Ex) $ python plot.py filename_of_data
+- Ex) $ python plot.py filename_of_data
+
 2) Use Jupyter Notebook
-•) Open up Plots_for_Data.ipynb in Jupyter Notebook
-•) Change the filename variable to filename_of_data
-•) Run the code
+- Open up Plots_for_Data.ipynb in Jupyter Notebook
+- Change the filename variable to filename_of_data
+- Run the code
 
 Output: Young's Modulus and a graph of the Stress vs Strain of the material
 
