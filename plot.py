@@ -35,10 +35,30 @@ data = np.loadtxt(fname=filename,delimiter=' ',comments='"',usecols=range(6))   
 # the Young's modulus (with units!)
 
 
-## Part 4
+## Part 4 (Done)
 # Modify your code to save your plots to a file and see if you can generate
 # plots and Young's moduli for all of the cleaned up files in your data 
 # directory. If you haven't already, this is a good time to add text to 
 # your .gitignore file so you're not committing the figures to your repository.
 
+#Added Code below
 
+def youngs_modulus (data):
+    
+    lin_fit = np.polyfit(data[0:200,5],data[0:200,1],1)
+    lin_func = np.poly1d(lin_fit)
+    
+    print("Young's Modulus = ",lin_fit[0],'Pa')
+    
+youngs_modulus(data)
+
+
+
+fig = plt.figure(figsize=(6,4))
+
+plt.plot(data[:,5],data[:,1],'c.')
+plt.xlabel('Strain (%)',size=12)
+plt.ylabel('Stress (Pa)',size=12)
+plt.title('Stress vs Strain of '+filename[39:-4],size=14)
+plt.savefig('stress-v-strain_'+filename[39:-4]+'.png')
+plt.show()
